@@ -46,6 +46,10 @@ class NewsListViewController: UIViewController {
         super.viewDidLoad()
         presenter.viewDidLoad()
         
+        NewsSearchManager()
+            .request(from: "아이폰", start: 1, display: 20) { newsArray in
+                print(newsArray)
+            }
     }
 
 
